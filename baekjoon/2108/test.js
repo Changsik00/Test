@@ -1,3 +1,6 @@
+const fs = require('fs');
+const readline = require('readline');
+
 
 function swap(arr, a, b) {
   const temp = arr[a]
@@ -27,8 +30,7 @@ function quickSort(arr, start, end) {
 }
 
 async function processLineByLine() {
-  const fileStream = fs.createReadStream('dev/stdin');
-  // const fileStream = fs.createReadStream('stdin.js');
+  const fileStream = fs.createReadStream('stdin.js');
   const rl = readline.createInterface({
     input: fileStream,
     crlfDelay: Infinity
@@ -79,3 +81,4 @@ async function processLineByLine() {
   
 
 processLineByLine()
+
